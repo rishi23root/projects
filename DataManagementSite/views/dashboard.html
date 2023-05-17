@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/other/favIcon.png" type="image/png">
+    <meta name="description" content="Welcome to Go Corona App 
+    Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for Content that you post on or through Service, including its legality, reliability, and appropriateness."/>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css" >
+    <script defer src="/static/js/notify.js"></script>
+    <script defer src="/static/js/dashboard.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="image">
+            <img class="profile" src="/static/other/img.png" alt="Dummy Profile">
+        </div>
+        <div class="data">
+            <div class="orgname" id="name">Go Corona Go </div>
+            <div class="routes">
+                <a rel="prefetch" href="/login">New Login</a>
+                <a class="logout" rel="prefetch" href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="profile_data">
+        <form id="update_form" action="/dashboard" method="post">
+            <div class="show_info">
+                <div class="form-group">                
+                    <label for="username">Name</label>
+                    <textarea type="text" name="username" class="form-control" id="username"></textarea>
+                </div>
+                
+                <div class="form-group">                
+                    <label for="manage">Manage</label>
+                    <textarea type="text" name="manage" class="form-control" id="manage" ></textarea>
+                </div>
+                
+                <div class="form-group">                
+                    <label for="gmail">Gmail</label>
+                    <textarea type="email" name="gmail" class="form-control" id="gmail"></textarea>
+                </div>
+                
+                <div class="form-group">                
+                    <label for="address">Address</label>
+                    <textarea type="text" name="address" class="form-control" id="address" ></textarea>
+                </div>
+                
+                <div class="form-group show_updated">                
+                    <label for="lastUpdate">last Updated</label>
+                    <textarea type="text" name="lastUpdate" class="form-control" id="lastUpdate"></textarea>
+                </div>
+            </div>
+            <div class="update_info">
+                <div class="cointainer"> 
+                    <div class="form-group">                
+                        <label for="icuBeds">icuBeds</label>
+                        <input type="number" oninput="update_total_beds()" name="icuBeds" class="form-control" id="icuBeds" >
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="covBeds">covBeds</label>
+                        <input type="number" oninput="update_total_beds()" name="covBeds" class="form-control" id="covBeds" >
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="vacBeds">vacBeds</label>
+                        <input type="number" oninput="update_total_beds()" name="vacBeds" class="form-control" id="vacBeds" >
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="totalBeds">totalBeds</label>
+                        <input type="number" name="totalBeds" class="form-control" id="totalBeds">
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="con1">con1</label>
+                        <input type="text" name="con1" class="form-control" id="con1">
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="con2">con2</label>
+                        <input type="text" name="con2" class="form-control" id="con2">
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="con3">con3</label>
+                        <input type="text" name="con3" class="form-control" id="con3">
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="location">location</label>
+                        <input type="text" name="location" class="form-control" id="location">
+                    </div>
+                    
+                    <div class="form-group">                
+                        <label for="ambulance">ambulance</label>
+                        <input type="number" name="ambulance" class="form-control" id="ambulance">
+                    </div>
+                    
+                    <div class="submitdiv">                
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div style="height: 3px;">
+    </div>
+    <div class="bubble_1"></div>
+    <div class="bubble_2"></div>    
+    <div class="bubble_3"></div>    
+</body>
+</html>

@@ -1,0 +1,24 @@
+create database `loginsystem` 
+
+1. userdata table 
+CREATE TABLE userdata (
+	username VARCHAR(255) NOT NULL, 
+	password VARCHAR(255) NOT NULL,
+	manage VARCHAR(255) NOT NULL,
+	gmail VARCHAR(255) NOT NULL,
+	address VARCHAR(255) NOT NULL,
+	lastUpdate VARCHAR(255) NOT NULL,
+	icuBeds VARCHAR(255) NOT NULL,
+	covBeds VARCHAR(255) NOT NULL,
+	totalBeds VARCHAR(255) NOT NULL,
+	vacBeds VARCHAR(255) NOT NULL,
+	con1 VARCHAR(255) NOT NULL,
+	con2 VARCHAR(255) NOT NULL,
+	con3 VARCHAR(255) NOT NULL,
+	location VARCHAR(255) NOT NULL,
+	ambulance VARCHAR(255) NOT NULL)
+
+2. user_session table
+CREATE TABLE user_session (
+  username varchar(255) NOT NULL,
+  session varchar(255) NOT NULL)

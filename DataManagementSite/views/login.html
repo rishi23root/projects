@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <meta name="description" content="Welcome to Go Corona App 
+    Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for Content that you post on or through Service, including its legality, reliability, and appropriateness."/>
+    <link rel="shortcut icon" href="/static/other/favIcon.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/login.css">
+    <script defer src="/static/js/notify.js"></script>
+    <script defer src="/static/js/login.js"></script>
+</head>
+<body>
+    <h1 class="heading"> Login Form </h1>   
+    <div class="container">
+        <div class="formContainer">
+            <form id="loginForm" method="POST" action="/login">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input autocapitalize=off type="text" name="username" class="form-control" id="username" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="submitdiv">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                    <a rel="prerender" href="/signup">sign-up Instead</a>
+                </div>
+            </form>       
+        </div>
+    </div>
+    <div class="bubble_1"></div>
+    <div class="bubble_2"></div>
+</body>
+</html>

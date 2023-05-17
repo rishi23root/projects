@@ -1,0 +1,123 @@
+@import "./base";
+
+input{
+    background: inherit;
+}
+
+.heading {
+    font-family: $headingFont;
+    margin: 0.2em 0 1em 0.5em;        
+}
+.container{
+    font-family: $normalFont;
+    .formContainer {
+        border-left : 8px solid #33a2fd;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        margin: 0.5em;
+        form {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0,0.1),2px 2px 6px rgba(0, 0, 0,0.2)  ;
+            background-color: white;
+            background: rgba( 255, 255, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 19px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            padding: 1em;
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                margin-top : 0.5em;
+                margin-bottom : 0.7em;
+                label{
+                    font-size: 0.8em;
+                }
+                input {
+                    font-size: 1.1em;
+                    border: none;
+                    outline: none;
+                    border-bottom: 2px solid black;
+                    padding: 0.2em;
+                }
+            }
+            .checkbox{
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                align-items: center;
+                font-size: 1.2em;
+                font-weight: 500;                
+                label, input {
+                    margin: 0.1em 0.3em;
+                    cursor: pointer;
+                    user-select: none; 
+                }                    
+            }
+            .submitdiv{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1.5em;
+                button {
+                    padding: 0.3em 0.7em;
+                    border-radius: 10px;
+                    background-color: #81e8f6;
+                    border: none;
+                    color: white;
+                    font-size: 1.1em;
+                    box-shadow: 2px 2px 2px rgba(0, 0, 0,0.1),2px 2px 6px rgba(0, 0, 0,0.2)  ;
+                }
+            }
+
+        }
+    }
+}
+  
+// creating balls of the gradiants
+.bubble_1{
+    position: fixed;
+    overflow: hidden;    
+    width: 25em;
+    height: 25em;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    &::before {
+        content: '';
+        transform: translate(50%,10%);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background: 
+            radial-gradient(circle at 0% 200%,
+                     #81e8f66e,
+                     #76dfefaf 50%,
+                     $primary_colour 90%);
+    }
+}
+
+.bubble_2{
+    position: fixed;
+    overflow: hidden;    
+    width: 10em;
+    height: 10em;
+    top: 0%;
+    left: 0;
+    z-index: -100;
+    &::before {
+        content: '';
+        transform: translate(-20%,-10%);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        background: 
+            radial-gradient(circle at 100% 120%,
+                     #81e8f66e,
+                     #76dfefaf 50%,
+                     $primary_colour 90%);
+    }
+}
+
+.error_user_Exist{
+    border-bottom: 2px solid red !important;
+}

@@ -1,0 +1,25 @@
+{
+    "name": "myapp",
+    "description": "a really cool app",
+    "version": "1.0.0",
+    "engines": {
+        "node": "12.11.1"
+    },
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "rishi",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "fs": "0.0.2",
+        "helmet": "^4.6.0",
+        "json": "^10.0.0",
+        "mongoose": "^5.12.9",
+        "nodemon": "^2.0.8",
+        "request": "^2.88.2"
+    }
+}

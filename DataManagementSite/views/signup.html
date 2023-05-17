@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <meta name="description" content="Welcome to Go Corona App 
+    Our Service allows you to post, link, store, share and otherwise make available certain information, text, graphics, videos, or other material (“Content”). You are responsible for Content that you post on or through Service, including its legality, reliability, and appropriateness."/>
+    <link rel="shortcut icon" href="/static/other/favIcon.png" type="image/png">
+    <link rel="stylesheet" href="/static/css/signup.css">
+    <script defer src="/static/js/notify.js"></script>
+    <script defer src="/static/js/signup.js"></script>
+</head>
+<body>
+    <h1 class="heading"> Sign-up Form </h1>   
+    <div class="container">
+        <div class="formContainer">
+            <form id="sigupForm" method="POST" action="/signup">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input required type="text" autocapitalize=off oninput="confirm_user();" onchange="show_server_message('local_message')" name="username" class="form-control" id="username" placeholder="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input required type="password" name="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input required type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <label for="manage">Manage</label>
+                    <input required type="text" autocapitalize=off name="manage" class="form-control" id="manage" placeholder="Manage">
+                </div>
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input required type="email" name="gmail" class="form-control" id="Email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input required type="text" autocapitalize=off name="address" class="form-control" id="address" placeholder="Address">
+                </div>
+                <div class="form-group checkbox">
+                    <label for="terms">I agree to the <a target="_blank" rel="prerender" href="/terms_and_conditions">Terms and Conditions</a></label><br>
+                    <input type="checkbox" id="terms" name="terms">
+                </div>
+                <div class="submitdiv">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a rel="prerender" href="/login">Login Instead</a>
+                </div>
+            </form>       
+        </div>
+    </div>
+    <div class="bubble_1"></div>
+    <div class="bubble_2"></div>
+</body>
+</html>
